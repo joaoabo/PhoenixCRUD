@@ -1,0 +1,26 @@
+Esse script insere dados nas tabelas "categorias" e "produtos" recém-criadas 
+no banco de dados. 
+Na tabela "categorias", são adicionados cinco registros com os nomes de 
+categorias e datas de cadastro. 
+Na tabela "produtos", são adicionados dez registros com os nomes dos 
+produtos, descrições, preços, quantidades, datas de cadastro e IDs das 
+categorias correspondentes.
+
+INSERT INTO [dbo].[categorias] (Nome, DataCadastro) VALUES 
+('Informática e Tablets', '2021-01-01 00:00:00'),
+('Moda, beleza e perfumaria', '2021-01-01 00:00:00'),
+('eletrodomêsticos e split', '2021-01-01 00:00:00'),
+('Esporte e suplementos', '2021-01-01 00:00:00'),
+('Games, livros e filmes', '2021-01-01 00:00:00');
+
+INSERT INTO [dbo].[produtos] (Nome, descricao, preco, quantidade, DataCadastro, CategoriaId) VALUES
+('Computador', 'Informática e Tablets', '2.523', '10', '2021-01-01 00:00:00', 1),
+('Máquina de lavar roupa', 'eletrodomêsticos e split', '321', '10', '2021-01-01 00:00:00', 3),
+('Geladeira', 'eletrodomêsticos e split', '5.543', '10', '2021-01-01 00:00:00', 3),
+('Bicicleta', 'Esporte e suplementos', '5.412', '10', '2021-01-01 00:00:00', 4),
+('Perfume', 'Moda, beleza e perfumaria', '115', '10', '2021-01-01 00:00:00', 2),
+('Sapato', 'Esporte e suplementos', '563', '10', '2021-01-01 00:00:00', 4),
+('Fogão', 'eletrodomêsticos e split', '448', '10', '2021-01-01 00:00:00', 3),
+('Cadeira', 'eletrodomêsticos e split', '621', '10', '2021-01-01 00:00:00', 3),
+('Livro', 'Games, livros e filmes', '34', '10', '2021-01-01 00:00:00', 5),
+('Televisor', 'eletrodomêsticos e split', '2.154', '10', '2021-01-01 00:00:00', 3);

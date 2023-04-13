@@ -1,0 +1,28 @@
+Esse script cria duas tabelas em um banco de dados:
+"Produto": com as colunas "Id", "Nome", "Descricao", "Preco", "Quantidade", "dataCriacao" e "CategoriaId".
+"Categoria": com as colunas "Id", "Nome" e "DataCadastro".
+Cada tabela tem uma chave primária (PK) que usa a coluna "Id" como chave, e outras configurações são definidas na criação das tabelas.
+
+CREATE TABLE [dbo].[Produto](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Nome] VARCHAR(70) NOT NULL,
+	[Descricao] [nvarchar](50) NOT NULL,
+	[Preco] [decimal](18, 2) NOT NULL,
+	[Quantidade] [decimal](18, 2) NOT NULL,
+	[DataCadastro] [datetime2](7) NOT NULL,
+	[CategoriaId] [int] NOT NULL,
+ CONSTRAINT [PK_Produto] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+CREATE TABLE [dbo].[Categoria](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Nome] [nvarchar](50) NOT NULL,
+	[DataCadastro] [datetime2](7) NOT NULL,
+ CONSTRAINT [PK_Categoria] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
