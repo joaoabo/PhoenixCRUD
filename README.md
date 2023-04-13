@@ -20,6 +20,10 @@ public ProdutoRepositorios()
 ## Execução
 Após a configuração do banco de dados, compile e execute a API. A API possui os seguintes endpoints:
 
+## Banco de Dados
+Na pasta ```DB``` está o script de criação das tabelas do banco de dados e o insert utilizado.
+### Banco de Dados utilizado SQL-Server
+
 ``` GET /api/produtos:``` Retorna uma lista com todos os produtos no banco de dados.
 ``` GET /api/produtos/{id}:``` Retorna o produto com o ID especificado.
 ``` POST /api/produtos:``` Adiciona um novo produto no banco de dados.
